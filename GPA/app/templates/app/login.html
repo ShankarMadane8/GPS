@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+
+
+  <style>
+    img {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      width: 100px;
+      height: 100px;
+    }
+    </style>
+</head>
+<body>
+  login
+
+
+
+  <form action="" method="POST" novalidate>
+    {% csrf_token %}
+    {{errors}} <br>
+    {{forms.email.label}}
+    {{forms.email}} <br>
+    {{forms.password.label}}
+    {{forms.password}} <br>   
+    
+    
+  <img id="pic1" onclick="changeImage1()" src="{% static 'images/pic_bulboff.gif' %}" alt="off">
+  <img id="pic2" onclick="changeImage2()" src="{% static 'images/pic_bulboff.gif' %}" alt="on">
+  <img id="pic3" onclick="changeImage3()" src="{% static 'images/pic_bulboff.gif' %}" alt="on">
+
+  <br>
+
+  <img id="pic4" onclick="changeImage4()" src="{% static 'images/pic_bulboff.gif' %}" alt="on">
+  <img id="pic5" onclick="changeImage5()" src="{% static 'images/pic_bulboff.gif' %}" alt="on">
+  <img id="pic6" onclick="changeImage6()" src="{% static 'images/pic_bulboff.gif' %}" alt="on">
+
+  <br>
+
+  <img id="pic7" onclick="changeImage7()" src="{% static 'images/pic_bulboff.gif' %}" alt="on">
+  <img id="pic8" onclick="changeImage8()" src="{% static 'images/pic_bulboff.gif' %}" alt="on">
+  <img id="pic9" onclick="changeImage9()" src="{% static 'images/pic_bulboff.gif' %}" alt="on">
+
+  <br>
+  <input  type="submit" value="login">
+
+  </form>
+
+
+
+
+  <script>
+
+
+
+
+    function changeImage1() {
+      var image = document.getElementById('pic1');
+      if (image.src.match("bulbon")) {
+        image.src = "{% static 'images/pic_bulboff.gif' %}";
+        document.getElementById('id_password').value+="1off";
+      } else {
+        image.src = "{% static 'images/pic_bulbon.gif' %}";
+        document.getElementById('id_password').value+="1on";
+      }
+    }
+  
+  
+  
+  
+  
+    function changeImage2() {
+      var image = document.getElementById('pic2');
+      if (image.src.match("bulbon")) {
+        image.src = "{% static 'images/pic_bulboff.gif' %}";
+        document.getElementById('id_password').value+="2off";
+      } else {
+        image.src = "{% static 'images/pic_bulbon.gif' %}";
+        document.getElementById('id_password').value+="2on";
+      }
+    }
+  
+  
+    function changeImage3() {
+      var image = document.getElementById('pic3');
+      if (image.src.match("bulbon")) {
+        image.src = "{% static 'images/pic_bulboff.gif' %}";
+        document.getElementById('id_password').value+="3off";
+      } else {
+        image.src = "{% static 'images/pic_bulbon.gif' %}";
+        document.getElementById('id_password').value+="3on";
+      }
+    }
+  
+  
+    function changeImage4() {
+      var image = document.getElementById('pic4');
+      if (image.src.match("bulbon")) {
+        image.src = "{% static 'images/pic_bulboff.gif' %}";
+        document.getElementById('id_password').value+="4off";
+      } else {
+        image.src = "{% static 'images/pic_bulbon.gif' %}";
+        document.getElementById('id_password').value+="4on";
+      }
+    }
+  
+  
+  
+    function changeImage5() {
+      var image = document.getElementById('pic5');
+      if (image.src.match("bulbon")) {
+        image.src = "{% static 'images/pic_bulboff.gif' %}";
+        document.getElementById('id_password').value+="5off"; 
+      } else {
+        image.src = "{% static 'images/pic_bulbon.gif' %}";
+        document.getElementById('id_password').value+="5on";
+      }
+    }
+  
+  
+    function changeImage6() {
+      var image = document.getElementById('pic6');
+      if (image.src.match("bulbon")) {
+        image.src = "{% static 'images/pic_bulboff.gif' %}";
+        document.getElementById('id_password').value+="6off";
+      } else {
+        image.src = "{% static 'images/pic_bulbon.gif' %}";
+        document.getElementById('id_password').value+="6on";    
+      }
+    }
+  
+  
+    function changeImage7() {
+      var image = document.getElementById('pic7');
+      if (image.src.match("bulbon")) {
+        image.src = "{% static 'images/pic_bulboff.gif' %}";
+        document.getElementById('id_password').value+="7off";        
+      } else {
+        image.src = "{% static 'images/pic_bulbon.gif' %}";
+        document.getElementById('id_password').value+="7on";       
+      }
+    }
+  
+  
+    function changeImage8() {
+      var image = document.getElementById('pic8');
+      if (image.src.match("bulbon")) {
+        image.src = "{% static 'images/pic_bulboff.gif' %}";
+        document.getElementById('id_password').value+="8off"; 
+      } else {
+        image.src = "{% static 'images/pic_bulbon.gif' %}";
+        document.getElementById('id_password').value+="8on";    
+      }
+    }
+  
+  
+  
+    function changeImage9() {
+      var image = document.getElementById('pic9');
+      if (image.src.match("bulbon")) {
+        image.src = "{% static 'images/pic_bulboff.gif' %}";       
+        document.getElementById('id_password').value+="9off";      
+      } else {
+        image.src = "{% static 'images/pic_bulbon.gif' %}";        
+        document.getElementById('id_password').value+="9on";       
+      }
+
+    }
+  
+  
+  
+  
+  
+    </script>
+
+
+
+
+</body>
+</html>
