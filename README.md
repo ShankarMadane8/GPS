@@ -1,1 +1,1 @@
-# GPS   Graphical Password Authentication
+# GPS   (Graphical Password Authentication)
